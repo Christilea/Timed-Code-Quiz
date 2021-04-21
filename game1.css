@@ -1,0 +1,61 @@
+.choice.container {
+    display: flex;
+    margin-bottom: 00.4rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(99, 131, 158, 0.25);
+    background-color: white;
+}
+
+.choice.container.hover {
+    cursor: ponter;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(109, 107, 109);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice.prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+
+}
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+/*heads up display (HUD)*/
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid rgb(39, 22, 39);
+
+}
+
+#progressBarFull {
+    height: 3.3rem;
+    background-color: rgb(39, 22, 39);
+}
+
