@@ -24,7 +24,7 @@ nav {
     text-align: center;
   }
   
-  summary {
+  h1 {
     margin-left: 25%;
     margin-right: 25%;
   }
@@ -34,14 +34,14 @@ nav {
     margin-left: auto;
     margin-right: auto;
     font-weight: normal;
-    background-color: darkblue;
+    background-color: rgb(44, 44, 121);
     color: white;
     display: block;
     border-radius: 10px;
   }
   
   button:hover {
-    background-color: palevioletred;
+    background-color: rgb(80, 33, 121);
   }
   
   .Questions {

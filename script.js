@@ -17,7 +17,6 @@ var scoreboardList = document.querySelector("#scoreboard");
 var sbTryAgainBtn = document.querySelector("#tryAgain");
 var sbClearBtn = document.querySelector("#clearBtn");
 
-//shows start page
 startPageEl.className = startPageEl.className.replace("hidden", "");
 
 //sets View High Scores link --> on click to go to Scoreboard
@@ -25,7 +24,7 @@ sbLinkEl.addEventListener("click", function(){
   showCard(scoreboardEl);
 });
 
-//click start btn to show first question
+//start btn to show first question
 startBtnEl.addEventListener("click", function(){
   questionArr = ["Question1", "Question2", "Question3", "Question4", "Question5"];
   showRandomQuestion(questionArr, inputScoreEl);
@@ -76,7 +75,6 @@ function setTime(timerEl) {
 var initalsEl = document.getElementById("initalsInput");
 var initialsSubmitBtn = document.getElementById("initalsSubmit");
 
-//input page submit initials button (store in local storage)
 initialsSubmitBtn.addEventListener("click", function(){
   var initalsSubmitted = initalsEl.value;
   var userInitialsArr = [initalsSubmitted, secondsLeft];
@@ -111,14 +109,14 @@ initialsSubmitBtn.addEventListener("click", function(){
   showCard(scoreboardEl);
 });
 
-//scoreboard page try again button
+// try again button
 sbTryAgainBtn.addEventListener("click", function(){
   showCard(startPageEl);
   secondsLeft=60;
   timerEl.textContent = secondsLeft;
 });
 
-//scoreboard page clear button
+// page clear button
 sbClearBtn.addEventListener("click", function(){
   //clear scoreboard out of DOM
   while (scoreboardList.children.length > 0) {
@@ -175,7 +173,6 @@ function showCard(calledCard){
     while (scoreboardList.children.length > 0) {
       scoreboardList.children.item(0).remove();
     }
-    // list scoreboard
     var highScoresArr = JSON.parse(localStorage.getItem("highScoresArr"));
 
     // Render scoreboard scores as li for each [initals, score]
