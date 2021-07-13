@@ -1,6 +1,6 @@
 //run this on page start
 var startPg = document.querySelector("#Cover");
-var startBtnEl = document.querySelector("#startBtn")
+var startBtn = document.querySelector("#startBtn")
 var sbLinkEl = document.querySelector("#sbLink");
 var scorebrd = document.querySelector("#score-card");
 var quest1 = document.querySelector("#Question1");
@@ -24,7 +24,7 @@ sbLinkEl.addEventListener("click", function(){
 });
 
 // shows first question
-startBtnEl.addEventListener("click", function(){
+startBtn.addEventListener("click", function(){
   questionArr = ["Question1", "Question2", "Question3", "Question4", "Question5"];
   showRandQuest(questionArr, inputScore);
   setTime(timerEl);
