@@ -1,7 +1,7 @@
 //run on page start
 var startPg = document.querySelector("#Cover");
 var startBtn = document.querySelector("#startBtn")
-var sbLinkEl = document.querySelector("#sbLink");
+var scbrdLink = document.querySelector("#sbLink");
 var scorebrd = document.querySelector("#score-card");
 var quest1 = document.querySelector("#Question1");
 var quest2 = document.querySelector("#Question2");
@@ -12,14 +12,14 @@ var inputScore = document.querySelector("#inputScoreInfo");
 var questionArr = ["Question1", "Question2", "Question3", "Question4", "Question5"];
 var answerBtn = document.querySelectorAll("button[correct]");
 var correctFooter = document.querySelector("#correctFooter");
-var incorrectFooterEl = document.querySelector("#incorrectFooter");
+var incorrectFooter = document.querySelector("#incorrectFooter");
 var scoreboardList = document.querySelector("#scoreboard");
 var tryAgainBtn = document.querySelector("#tryAgain");
 var sbClearBtn = document.querySelector("#clearBtn");
 
 startPg.className = startPg.className.replace("hidden", "");
 
-sbLinkEl.addEventListener("click", function(){
+scbrdLink.addEventListener("click", function(){
   showCard(scorebrd);
 });
 
@@ -133,9 +133,9 @@ function showRandQuest(questionArr, inputScore){
   }
   else{ 
     var i = Math.floor(Math.random() * questionArr.length);
-    var chosenQ = document.getElementById(questionArr[i]);
+    var chsQuest = document.getElementById(questionArr[i]);
     questionArr.splice(i, 1);
-    showCard(chosenQ);
+    showCard(chsQuest);
   }
 }
 
@@ -185,9 +185,9 @@ function rightAnswer(btnEl){
   }
   else{
     // incorrect footer & correct footer
-    incorrectFooterEl.className = incorrectFooterEl.className.replace("hidden", "");
+    incorrectFooter.className = incorrectFooter.className.replace("hidden", "");
     setTimeout(function(){
-      incorrectFooterEl.className += ' hidden';
+      incorrectFooter.className += ' hidden';
     }, 1000);
   }
   return isCorrect;
