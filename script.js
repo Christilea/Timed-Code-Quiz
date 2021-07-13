@@ -36,8 +36,8 @@ for(i=0; i<answerBtn.length; i++){
   Btn.addEventListener("click", function(e){
     e=e||window.event;
     var btnEl = e.target||e.srcElement;
-    var isCorrectReturn = rightAnswer(btnEl);
-    if (isCorrectReturn == "true"){
+    var correctAnswer = answerCorrect(btnEl);
+    if (correctAnswer == "true"){
       showRandQuest(questionArr, inputScore);
     }
     else{
@@ -175,7 +175,7 @@ function showCard(calledCard){
 }
 
 //correct-incorrect footer
-function rightAnswer(btnEl){
+function answerCorrect(btnEl){
   var isCorrect = btnEl.getAttribute("correct");
   if (isCorrect == "true"){
     correctFooter.className = correctFooter.className.replace("hidden", "");
