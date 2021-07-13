@@ -1,4 +1,4 @@
-//run this on page start
+//run on page start
 var startPg = document.querySelector("#Cover");
 var startBtn = document.querySelector("#startBtn")
 var sbLinkEl = document.querySelector("#sbLink");
